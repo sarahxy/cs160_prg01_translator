@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".translation">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/language_from"
+                style="@android:style/Widget.Holo.Light.Spinner">
+            </Spinner>
+            <!-- → -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:text="→"
+                android:textSize="35dp"/>
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/language_to"
+                style="@android:style/Widget.Holo.Light.Spinner">
+            </Spinner>
+            <Button
+                android:id="@+id/translate"
+                android:text="="
+                android:textSize="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"/>
+        </LinearLayout>
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:id="@+id/text_from"
+            android:scaleType="fitCenter"
+            style="@android:style/Widget.Holo.Light.Spinner">
+        </Spinner>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="↓"
+            android:textSize="35dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:scaleType="fitCenter"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:text="Translation will appear here!"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:id="@+id/text_to"
+            android:inputType="textNoSuggestions"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>
